@@ -1,0 +1,91 @@
+@use "colors";
+
+/* import fonts */
+// @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// html {
+//   cursor: none;
+// }
+
+$background: colors.color("background");
+$highlight: colors.color("secondary-highlight");
+$foreground: colors.color("lightest-foreground");
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $foreground;
+  background-color: $background;
+  margin: 50px;
+}
+
+
+#search-bar {
+  margin-bottom: 20px;
+
+  input {
+    font-size: 1.5em;
+    border-radius: .25em;
+  }
+}
+
+#video-detail {
+  width: 100%;
+}
+
+#video-section {
+  display: flex;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    width: 25vw;
+    padding: 10px;
+  }
+  li:hover {
+    background: highlight;
+  }
+
+}
+
+// :is(.logo, #main) {
+//   // z-index: 3;
+//   pointer-events: none;
+// }
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url("/fonts/SF-Pro/SF-Pro-Text-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+// SF Mono
+@font-face {
+  font-family: 'SF Mono';
+  src: url("/fonts/SF-Mono/SFMono-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Mono';
+  src: url("/fonts/SF-Mono/SFMono-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Mono';
+  src: url("/fonts/SF-Mono/SFMono-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
