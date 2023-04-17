@@ -1,4 +1,4 @@
-# CS52 SA2: Vite My Mouse!
+# CS52 SA3: Video Search
 
 [deployed url](https://video-search-pkvn.onrender.com/)
 
