@@ -19,13 +19,15 @@ function App(props) {
     });
   };
 
-  const debouncedSearch = useCallback(debounce(search, 1000), []);
+  const debouncedSearch = useCallback(debounce(search, 500), []);
 
   useEffect(() => { search('pixar'); }, []);
   return (
-    <div>
-      <SearchBar onSearchChange={debouncedSearch} />
-      <VideoDetail video={selectedVideo} />
+    <div className="main-container">
+      <div className="main-video">
+        <SearchBar onSearchChange={debouncedSearch} />
+        <VideoDetail video={selectedVideo} />
+      </div>
       <VideoList onVideoSelect={(selection) => setSelected(selection)} videos={videos} />
     </div>
   );

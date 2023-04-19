@@ -9,7 +9,7 @@ function SearchBar(props) {
   };
   return (
     <div id="search-bar">
-      <input onChange={onInputChange} value={searchTerm} />
+      <input onChange={onInputChange} value={searchTerm} placeholder="Search..." />
     </div>
   );
 }
