@@ -1,6 +1,6 @@
 # CS52 SA3: Video Search
 
-deployed at [`mnml-yt.amitt.ai`](https://minimal-yt.amitt.ai)
+deployed at [`mnml-yt.amitt.ai`](https://mnml-yt.amitt.ai)
 
 ## What Worked Well
 
