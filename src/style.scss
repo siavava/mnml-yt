@@ -1,27 +1,10 @@
 @use "colors";
 
-/* import fonts */
-// @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-// html {
-//   cursor: none;
-// }
-
-// $background: colors.color("background");
-// $light-background: colors.color("light-background");
-// $lightest-background: colors.color("lightest-background");
-// $highlight: colors.color("primary-highlight");
-// $dark-foreground: colors.color("dark-foreground");
-// $foreground: colors.color("light-foreground");
-// $light-foreground: colors.color("lightest-foreground");
-// $font: 'SF Pro Text', sans-serif;
-
 
 body {
   font-family: "Cohere Variable", sans-serif;
