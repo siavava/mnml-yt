@@ -5,11 +5,11 @@ const API_URL = 'https://www.googleapis.com/youtube/v3/search';
 // const API_KEY = 'AIzaSyA6MikRWLRfQqIaoLMuxcsGI9b8NczdP6Q';
 const API_KEY = 'AIzaSyBI85DjUwwtapFNrlKtv-IOQUytfGVZxHU';
 
-const youtubeSearch = async (term) => {
+const youtubeSearch = async (query: string) => {
   const params = {
     part: 'snippet',
     key: API_KEY,
-    q: term,
+    q: query,
     type: 'video',
   };
 

@@ -13,24 +13,37 @@
 //   cursor: none;
 // }
 
-$background: colors.color("background");
-$light-background: colors.color("light-background");
-$lightest-background: colors.color("lightest-background");
-$highlight: colors.color("primary-highlight");
-$dark-foreground: colors.color("dark-foreground");
-$foreground: colors.color("light-foreground");
-$light-foreground: colors.color("lightest-foreground");
-$font: 'SF Pro Text', sans-serif;
+// $background: colors.color("background");
+// $light-background: colors.color("light-background");
+// $lightest-background: colors.color("lightest-background");
+// $highlight: colors.color("primary-highlight");
+// $dark-foreground: colors.color("dark-foreground");
+// $foreground: colors.color("light-foreground");
+// $light-foreground: colors.color("lightest-foreground");
+// $font: 'SF Pro Text', sans-serif;
 
 
 body {
-  font-family: "SF Pro Text", sans-serif;
-  color: $foreground;
-  background-color: $background;
+  font-family: "Cohere Variable", sans-serif;
+  color: colors.color(foreground);
+  background-color: colors.color(background);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+}
+
+#tracker {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  width: min(500px, 50vw);
+  aspect-ratio: 1/1;
+  background: colors.color("foreground");
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  animation: rotate 10s ease-in-out infinite;
+  filter: blur(100px);
 }
 
 #main {
@@ -38,7 +51,10 @@ body {
   height: 100vh;
   display: flex;
   place-items: center;
-
+  z-index: 2;
+  background: rgba(colors.color(light-background), 0.9);
+  margin: 0;
+  padding: 0 20px;
 }
 
 .main-container {
@@ -54,7 +70,6 @@ body {
     flex-direction: column;
     gap: 0;
   }
-
 
   .main-video {
     width: 65%;
@@ -72,21 +87,23 @@ body {
         font-size: 1.5em;
         border-radius: .25em;
         width: 100%;
-        background: $lightest-background;
-        color: $foreground;
+        background: colors.color(lightest-background);
+        color: colors.color(foreground);
+        border: 1px solid colors.color(lightest-background);
+        background: rgba(colors.color(light-background), 0.5);
         border-radius: 50px;
         padding: 5px 30px;
-        border: none;
         outline: none;
 
         &::placeholder {
-          color: $dark-foreground;
+          color: colors.color(dark-foreground);
         }
       }
     }
 
     #video-detail {
-      background: $light-background;
+      background: rgba(colors.color(light-background), 0.5);
+      border: 1px solid colors.color(lightest-background);
       padding: 40px;
       border-radius: 10px;
 
@@ -96,14 +113,15 @@ body {
       .video-detail-text {
         margin-top: 30px;
         padding-top: 20px;
-        border-top: 1px solid $lightest-background;
+        border-top: 1px solid colors.color(lightest-background);
         line-height: 2;
 
         .video-title {
           font-size: 2em;
-          font-weight: 600;
+          font-weight: 500;
+          font-family: "Cohere Variable", sans-serif;
+          font-variation-settings: "cuts" 300;
           margin-bottom: 10px;
-          color: $light-foreground;
         }
       }
     }
@@ -117,7 +135,8 @@ body {
     padding: 0 20px;
     margin-top: 65px;
     min-height: fit-content;
-    background-color: $light-background;
+    background: rgba(colors.color(light-background), 0.3);
+    border: 1px solid colors.color(lightest-background);
 
     @media only screen and (max-width: 1080px) {
       width: 100%;
@@ -132,7 +151,7 @@ body {
       
       
       &:not(:last-child) {
-        border-bottom: 1px solid $lightest-background;
+        border-bottom: 1px solid colors.color(lightest-background);
       }
       
       &:hover {
@@ -142,7 +161,7 @@ body {
         }
         .small-video-title {
           transition: all .5s ease-in-out;
-          color: $highlight;
+          color: colors.color(primary-highlight)
         }
       }
 
@@ -160,32 +179,11 @@ body {
   }
 }
 
-@font-face {
-  font-family: 'SF Pro Text';
-  src: url("/fonts/SF-Pro/SF-Pro-Text-Regular.otf");
-  font-weight: 400;
-  font-style: normal;
-}
 
-
-// SF Mono
+// fonts
 @font-face {
-  font-family: 'SF Mono';
-  src: url("/fonts/SF-Mono/SFMono-Regular.otf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SF Mono';
-  src: url("/fonts/SF-Mono/SFMono-Medium.otf");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SF Mono';
-  src: url("/fonts/SF-Mono/SFMono-Bold.otf");
-  font-weight: 700;
-  font-style: normal;
+  font-family: "Cohere Variable";
+  src: url("/fonts/CohereVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
 }

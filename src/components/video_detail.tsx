@@ -1,10 +1,18 @@
 import React from 'react';
 
-function VideoDetail({ video }) {
+import { Video } from '../types';
+
+interface VideoDetailProps {
+  video: Video;
+}
+
+function VideoDetail({ video }: VideoDetailProps) {
   // if video is null then it is still loading!
   if (!video) {
     return <div>Loading...</div>;
   }
+
+  console.log(Object.keys(video))
 
   // otherwise, render the video
   const { videoId } = video.id;
@@ -16,8 +24,8 @@ function VideoDetail({ video }) {
         <iframe title="youtube detail" className="embed-responsive-item" src={url} />
       </div>
       <div className="video-detail-text">
-        <div className="video-title">{video.snippet.title}</div>
-        <div className="video-description">{video.snippet.description}</div>
+        <div className="video-title">{video?.snippet.title}</div>
+        <div className="video-description">{video?.snippet.description}</div>
       </div>
     </div>
   );
