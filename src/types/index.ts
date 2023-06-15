@@ -1,6 +1,11 @@
+/**
+ * @fileoverview Types for the app
+ */
 
-
-
+/**
+ * @typedef {Object} Video
+ * Video interface for the app
+ */
 interface Video {
   id: {
     videoId: string;
@@ -17,6 +22,9 @@ interface Video {
   }
 }
 
+/**
+ * Default empty video object
+ */
 const EMPTY_VIDEO: Video = {
   id: {
     videoId: '',
