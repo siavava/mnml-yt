@@ -12,8 +12,6 @@ function VideoDetail({ video }: VideoDetailProps) {
     return <div>Loading...</div>;
   }
 
-  console.log(Object.keys(video))
-
   // otherwise, render the video
   const { videoId } = video.id;
   const url = `https://www.youtube.com/embed/${videoId}`;

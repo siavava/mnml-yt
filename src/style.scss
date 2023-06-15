@@ -92,7 +92,9 @@ body {
 
       .video-frame {
         border-radius: 10px;
+        width: 100% !important;
       }
+      
       .video-detail-text {
         margin-top: 30px;
         padding-top: 20px;
@@ -100,7 +102,7 @@ body {
         line-height: 2;
 
         .video-title {
-          font-size: 2em;
+          font-size: 1.6em;
           font-weight: 500;
           font-family: "Cohere Variable", sans-serif;
           font-variation-settings: "cuts" 300;

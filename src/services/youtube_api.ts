@@ -27,7 +27,7 @@ const youtubeSearch = async (query: string) => {
     // This is for testing so the API doesn't run out!
     // return $.getJSON('/src/services/test_data.json');
   } catch (error) {
-    console.log(`youtube api error: ${error}`);
+    console.error(`youtube api error: ${error}`);
     throw error;
   }
 };
