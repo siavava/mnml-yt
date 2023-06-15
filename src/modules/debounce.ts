@@ -1,7 +1,11 @@
 /**
- * @param {Function} fun - The function to debounce
- * @param {number} delay - The delay in milliseconds
- * @returns {Function} - The debounced function
+ * Debounce function that will delay the execution of the passed function
+ * until the delay time has passed. If the function is called again before
+ * the delay time has passed, the previous call will be cancelled and a new
+ * timeout will be set.
+ * @param {Function} fun - The function to debounce.
+ * @param {number} delay - The delay in milliseconds. Defaults to `500ms`.
+ * @returns {Function} - The debounced function.
  */
 export default function debounce(fun: Function, delay: number = 500): Function {
   // this timeout is closed into the returned function.

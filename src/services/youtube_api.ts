@@ -5,6 +5,13 @@ const API_URL = 'https://www.googleapis.com/youtube/v3/search';
 // const API_KEY = 'AIzaSyA6MikRWLRfQqIaoLMuxcsGI9b8NczdP6Q';
 const API_KEY = 'AIzaSyBI85DjUwwtapFNrlKtv-IOQUytfGVZxHU';
 
+/**
+ * @param {string} query - The search query.
+ * @returns {Promise} - The promise for the API call.
+ * @description - This function makes a call to the YouTube API
+ * and returns a promise for the response.
+ * @see https://developers.google.com/youtube/v3/docs/search/list
+ */
 const youtubeSearch = async (query: string) => {
   const params = {
     part: 'snippet',
