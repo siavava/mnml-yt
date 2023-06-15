@@ -9,7 +9,7 @@
 body {
   font-family: "Cohere Variable", sans-serif;
   color: colors.color(foreground);
-  background-color: colors.color(background);
+  background-color: colors.color("background");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,13 +73,13 @@ body {
         background: colors.color(lightest-background);
         color: colors.color(foreground);
         border: 1px solid colors.color(lightest-background);
-        background: rgba(colors.color(light-background), 0.5);
+        background: rgba(colors.color("background"), 0.5);
         border-radius: 50px;
         padding: 5px 30px;
         outline: none;
 
         &::placeholder {
-          color: colors.color(dark-foreground);
+          color: rgba(colors.color(foreground), 0.5);
         }
       }
     }
@@ -94,7 +94,7 @@ body {
         border-radius: 10px;
         width: 100% !important;
       }
-      
+
       .video-detail-text {
         margin-top: 30px;
         padding-top: 20px;

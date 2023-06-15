@@ -22,7 +22,7 @@ function App() {
     });
   };
 
-  const debouncedSearch = useCallback(debounce(search, 200), []);
+  const debouncedSearch = useCallback(debounce(search, 500), []);
 
   useEffect(() => { search('autofocus'); }, []);
   return (
