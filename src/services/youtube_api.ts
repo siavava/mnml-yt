@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 
 const API_URL = 'https://www.googleapis.com/youtube/v3/search';
-const { YOUTUBE_API_KEY } = process.env;
+const { YOUTUBE_API_KEY: API_KEY } = import.meta.env;
 
 /**
  * @param {string} query - The search query.
@@ -14,7 +14,7 @@ const { YOUTUBE_API_KEY } = process.env;
 const youtubeSearch = async (query: string) => {
   const params = {
     part: 'snippet',
-    key: YOUTUBE_API_KEY,
+    key: API_KEY,
     q: query,
     type: 'video',
   };
